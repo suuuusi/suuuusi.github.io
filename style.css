@@ -2,33 +2,45 @@ body {
     font-family: Arial;
     font-size: 12pt;
     color: #3333;
-    background-color: rgb(228, 174, 214);
+    background-color: rgb(255,220,243);
     margin: 20px;
     }
 
 
 h1 {
     font: Arial;
-    color: #009;
+    color: #000;
     font-size: 24pt;    
     }  
     
 h2 {
     font: Arial;
-    color: #008;
+    color: #000;
     font-size: 20pt;    
     }  
 
-h2 {
+h3 {
     font: Arial;
-    color: #116;
+    color: rgb(0, 75, 63);
     font-size: 18pt;    
     } 
 
-
 p {
+    font: Sans-serif;
     font-size: 12pt;
-    color: #000;
+    color: rgb(14,122,104);
+}
+
+li {
+    font: San-serif;
+    font-size: 12pt;
+    color: #000000;
+}
+
+dd {
+    font: San-serif;
+    font-size: 12pt;
+    color: rgb(0, 75, 63);
 }
 
 
@@ -43,7 +55,7 @@ a:hover{
     color: #888}
 
 a:active {
-    color: #7777
+    color: #57d4a477
 }
 
 
@@ -58,17 +70,26 @@ a:active {
 
 .table-cell {
     display: table-cell;
-    padding: 10px
+    padding: 10px;
     border: 1px solid #ccc;
 }
 
 
+.container {
+    display: table;
+    width: 100%
+}
+
+
 .text-div {
-    display: inline-block
+    display: table-cell;
+    border: 1px solid #ccc;
     width: 50%;
 }
 
 .link-div {
-    display: inline-block;
+    display: table-cell;
+    border: 1px solid #ccc;
+    padding: 10px;
     width: 50%;
 }
