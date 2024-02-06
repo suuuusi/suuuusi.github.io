@@ -1,0 +1,74 @@
+body {
+    font-family: Arial;
+    font-size: 12pt;
+    color: #3333;
+    background-color: rgb(228, 174, 214);
+    margin: 20px;
+    }
+
+
+h1 {
+    font: Arial;
+    color: #009;
+    font-size: 24pt;    
+    }  
+    
+h2 {
+    font: Arial;
+    color: #008;
+    font-size: 20pt;    
+    }  
+
+h2 {
+    font: Arial;
+    color: #116;
+    font-size: 18pt;    
+    } 
+
+
+p {
+    font-size: 12pt;
+    color: #000;
+}
+
+
+a:link {
+    color: rgb(122, 122, 194)
+}
+a:visited {
+    color: rgb(36, 128, 165)
+}
+
+a:hover{
+    color: #888}
+
+a:active {
+    color: #7777
+}
+
+
+.table-container {
+    display: table;
+    width: 100%;
+}
+
+.table-row {
+    display: table-row;
+}
+
+.table-cell {
+    display: table-cell;
+    padding: 10px
+    border: 1px solid #ccc;
+}
+
+
+.text-div {
+    display: inline-block
+    width: 50%;
+}
+
+.link-div {
+    display: inline-block;
+    width: 50%;
+}
