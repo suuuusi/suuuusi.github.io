@@ -4,18 +4,24 @@
         <title>Su Myat Eain Si's Website Portfolio</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css">
+        <script src="su_script.js" defer></script>
     </head>
     <body>
         <header>
             <h1> Su Myat Eain Si's Website Portfolio</h1><hr>
         </header>
         <main>
+            
+            <button id="nameButton">Enter your name</button>
+            <p id="nameOutput"></p>
             <h3>Contact Information</h3>
             <p> Hi! Welcome to my portfolio, my name is Su and I'm currently a 3rd Year BTM student at Toronto Metropolitan Univeresity (TMU).</p>
                 <ul>
                     <li>E-mail:
                         <a href="mailto:sumyateainsi07@gmail.com">sumyateainsi07@gmail.com</a>
                     </li>
+
+            <img src="images/image.png" id="myImage" alt="My Image" width="200">
 
             <h2>Education</h2>
                 <h4>
@@ -77,6 +83,22 @@
                     </dl>
                 </ul>
             
+
+            <h2>Links</h2>
+                <ul id="navigation">
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="experiences.html">Experiences</a></li>
+                    <li id="menuItem">Others</li>
+                </ul>
+
+                <div id="menuDropdown" style="display: none;">
+                    <ul>
+                        <li><a href="projects.html">Schools</a></li>
+                        <li><a href="experiences.html">Additional Info</a></li>
+                    </ul>
+                 </div>
+
+
             <div class="container">
                 <div class = "text.div">
                     <h2> My Hobbies </h2>
@@ -89,6 +111,7 @@
                     <li><a href="https:www.canva.com/design/DAF793Y5s0s/muXQifomw9P3Uv5MmLsHuA/view?utm_content=DAF793Y5s0s&utm_campaign=designshare&utm_medium=link&utm_source=editor">My Resume</a></li>
                     <li><a href="https://www.linkedin.com/in/su-myat-eain-si-15ab761aa/">My Linkedin</a></li>
             </div>
+
         </main>
         <footer>
             <small><i>Copyright &copy; 2024 Su Si </i></small>
