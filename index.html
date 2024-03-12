@@ -99,7 +99,7 @@
                  </div>
 
 
-            <div class="container">
+            <div class="container2">
                 <div class = "text.div">
                     <h2> My Hobbies </h2>
                         <p> I like to play games (FiveM, R6 etc) in my free time. I also like to cook, play basketball and cook! </p>
@@ -113,7 +113,144 @@
             </div>
 
         </main>
-        <footer>
-            <small><i>Copyright &copy; 2024 Su Si </i></small>
-        </footer>
     </body>
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Feedback Form</h2>
+        <form id="feedbackForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label>Gender:</label><br>
+                <label for="male">Male</label>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="female">Female</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="transgender">Transgender</label>
+                <input type="radio" id="transgender" name="gender" value="transgender">
+                <label for="non-binary">Non-Binary</label>
+                <input type="radio" id="non-binary" name="gender" value="non-binary">
+                <label for="prefer-not-to-say">Prefer-not-to-say</label>
+                <input type="radio" id="prefer-not-to-say" name="gender" value="prefer-not-to-say">
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age">
+            </div>
+            <div class="form-group">
+                <label>Prefer Method of Communication:</label><br>
+                <label for="Phone">Phone</label>
+                <input type="checkbox" id="Phone" name="communication" value="Phone">
+                <label for="Email">Email</label>
+                <input type="checkbox" id="Email" name="communication" value="Email">
+                <label for="advanced">Advanced</label>
+                <input type="checkbox" id="advanced" name="communication" value="advanced">
+            </div>
+            <div class="form-group">
+                <label for="message">Feedback:</label><br>
+                <textarea id="message" name="message" rows="4"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="occupation">Occupation:</label>
+                <input type="text" id="occupation" name="occupation">
+            </div>
+            <div class="form-group">
+                <label for="thoughts">Overall Opinion:</label>
+                <select id="thoughts" name="thoughts">
+                    <option value="great">Great</option>
+                    <option value="good">Good</option>
+                    <option value="okay">Okay</option>
+                    <option value="not bad">Not Bad</option>
+                    <option value="bad">Very Bad</option>
+                </select>
+            </div>
+            <!-- End of New Questions -->
+            <div class="form-group">
+                <button type="submit">Submit</button>
+                <button type="button" onclick="clearForm()">Clear</button>
+            </div>
+        </form>
+    </div>
+    
+
+  <script>
+    // Function to handle form submission
+    document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent default form submission
+
+      // Get form data
+      var formData = {};
+      var inputs = this.elements;
+      for (var i = 0; i < inputs.length; i++) {
+        var input = inputs[i];
+        if (input.type !== 'submit') {
+          if (input.type === 'radio' && !input.checked) {
+            continue;
+          }
+          if (input.type === 'checkbox') {
+            if (!formData[input.name]) {
+              formData[input.name] = [];
+            }
+            if (input.checked) {
+              formData[input.name].push(input.value);
+            }
+          } else {
+            formData[input.name] = input.value;
+          }
+        }
+      }
+
+      // Store form data in local storage
+      localStorage.setItem('formData', JSON.stringify(formData));
+      alert('Thank you for your feedback!');
+    });
+
+    // Function to clear form fields
+    function clearForm() {
+      document.getElementById('feedbackForm').reset();
+      localStorage.removeItem('formData');
+    }
+
+    // Populate form fields from local storage on page load
+    window.onload = function() {
+      var formData = JSON.parse(localStorage.getItem('formData'));
+      if (formData) {
+        var inputs = document.getElementById('feedbackForm').elements;
+        for (var i = 0; i < inputs.length; i++) {
+          var input = inputs[i];
+          if (formData[input.name]) {
+            if (input.type === 'radio' || input.type === 'checkbox') {
+              if (formData[input.name].includes(input.value)) {
+                input.checked = true;
+              }
+            } else {
+              input.value = formData[input.name];
+            }
+          }
+        }
+      }
+    };
+  </script>
+</body>
+
+<footer>
+    <small><i>Copyright &copy; 2024 Su Si </i></small>
+</footer>
+
+</html>
