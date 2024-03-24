@@ -5,40 +5,40 @@ body {
   background-color: #ececec;
 }
 header {
-  background-color: #e1bec5; /* Change header background color to beige */
-  color: #333; /* Change header text color to dark */
+  background-color: #e1bec5; 
+  color: #333; 
   padding: 20px;
   text-align: center;
 }
+
 header h1 {
   margin: 0;
 }
+
 main {
   padding: 20px;
 }
 
 .contact-info {
     display: flex;
-    flex-direction: column; /* Stack items vertically */
+    flex-direction: column; 
     align-items: center;
     margin-bottom: 20px;
 }
 
 .image-container {
   display: flex;
-  flex-direction: column; /* Stack items vertically */
-  align-items: center; /* Center align items horizontally */
-  margin-bottom: 10px; /* Add margin below the image */
+  flex-direction: column; 
+  align-items: center; 
+  margin-bottom: 10px; 
 }
 
 
 .image-description {
-    font-size: 14px; /* Adjust font size as needed */
-    color: #888; /* Adjust color as needed */
-    margin-top: 5px; /* Add margin above the image description */
+    font-size: 14px; 
+    color: #888; 
+    margin-top: 5px; 
 }
-
-
 
 h2 {
   color: #333;
@@ -53,11 +53,27 @@ ul {
   list-style-type: none;
   padding: 0;
 }
+
 footer {
-  color: #333; /* Change footer text color to dark */
+  color: #333;
   text-align: right;
   padding: 10px 20px;
   position: fixed;
-  bottom: 0;
+  top: 0;
   right: 0;
+}
+
+.options {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.options button {
+  margin-left: 10px;
+}
+
+.alternative-color {
+  background-color: #ffffff; 
+  color: #000000;
 }
